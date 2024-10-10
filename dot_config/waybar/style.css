@@ -1,7 +1,7 @@
 @import "macchiato.css";
 
 * {
-  font-family: "JetBrainsMono Nerd Font Propo", Roboto, Helvetica,s ans-serif;
+  font-family: "JetBrainsMono Nerd Font Propo", Roboto, Helvetica, s ans-serif;
   font-size: 18px;
 }
 
@@ -26,28 +26,35 @@ button:hover {
   box-shadow: inset 0 -3px #ffffff;
 }
 
-/* you can set a style on hover for any module like this */
-#pulseaudio:hover {
-  background-color: @surface2;
-}
-
 #workspaces button {
-  padding: 1px 5px;
+  /* padding: 1px 5px; */
+  padding: 0 0.5em;
   background-color: transparent;
-  color: @rosewater;
+  /* color: @rosewater; */
+  color: @text;
+  margin: 0.25em;
 }
 
-#workspaces button:hover {
-  background: #262626;
+#workspaces button.empty {
+  color: @overlay0;
 }
 
-#workspaces button.focused {
-  background-color: gray;
-  box-shadow: inset 0 -3px #ffffff;
+#workspaces button.visible {
+  color: @blue;
+  font-weight: bolder;
+}
+
+#workspaces button.active {
+  color: @green;
+  font-weight: bold;
+  background-color: green;
+  border-radius: 50%;
 }
 
 #workspaces button.urgent {
-  background-color: #eb4d4b;
+  background-color: @red;
+  border-radius: 1em;
+  color: @text;
 }
 
 #mode {
@@ -55,41 +62,61 @@ button:hover {
   box-shadow: inset 0 -3px #ffffff;
 }
 
-#clock,
-#battery,
-#cpu,
-#memory,
-#temperature,
-#network,
 #pulseaudio {
   padding: 0 10px;
-}
-
-#pulseaudio {
   color: @maroon;
 }
 
+#pulseaudio.muted {
+  color: @overlay0;
+}
+
+/* #pulseaudio:hover {
+  background-color: @base;
+} */
+
 #network {
+  padding: 0 10px;
   color: @yellow;
 }
 
 #temperature {
+  padding: 0 10px;
   color: @sky;
 }
 
 #battery {
+  padding: 0 10px;
   color: @green;
 }
 
+#bluetooth {
+  padding: 0 10px;
+  color: @sky;
+}
+
+#tray {
+  padding: 0 10px;
+  color: @sky;
+}
+
+#bluetooth.off,
+#bluetooth.disabled {
+  color: @overlay0;
+}
+
 #clock {
+  padding: 0 10px;
   color: @flamingo;
 }
 
 #cpu {
+  padding: 0 10px;
   color: @peach;
 }
 
 #memory {
+  padding: 0 10px;
   color: @green;
 }
 
@@ -140,6 +167,27 @@ label:focus {
   background-color: #000000;
 }
 
-#pulseaudio.muted {
-  color: @text;
+#backlight-slider {
+  min-width: 150px;
+}
+#backlight-slider slider {
+  min-height: 0px;
+  min-width: 0px;
+  opacity: 0;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+}
+#backlight-slider trough {
+  min-height: 10px;
+  min-width: 10px;
+  border-radius: 5px;
+  background-color: @base;
+  border: 1px solid @overlay0;
+}
+#backlight-slider highlight {
+  min-width: 10px;
+  border-radius: 5px;
+  background-color: @overlay0;
+  border: none;
 }
