@@ -1,7 +1,7 @@
 @import "macchiato.css";
 
 * {
-  font-family: "JetBrainsMono Nerd Font Propo", Roboto, Helvetica, s ans-serif;
+  font-family: "JetBrainsMono Nerd Font Propo", Roboto, Helvetica, sans-serif;
   font-size: 18px;
 }
 
@@ -85,17 +85,20 @@ button:hover {
   color: @sky;
 }
 
-#battery {
-  padding: 0 10px;
-  color: @green;
-}
-
-#bluetooth {
+#tray {
   padding: 0 10px;
   color: @sky;
 }
 
-#tray {
+#tray > .active {
+  color: #91d7e3
+}
+
+#tray > .passive {
+  color: @overlay0
+}
+
+#bluetooth {
   padding: 0 10px;
   color: @sky;
 }
@@ -128,8 +131,10 @@ button:hover {
 .modules-left,
 .modules-center {
   background-color: @base;
+  color: @text;
   border-radius: 15px;
 }
+
 .modules-right {
   padding: 0 10px;
 }
@@ -141,6 +146,12 @@ button:hover {
 .modules-center {
   padding: 0 10px;
 }
+
+#battery {
+  padding: 0 10px;
+  color: @green;
+}
+
 #battery.charging,
 #battery.plugged {
   color: @sapphire;
