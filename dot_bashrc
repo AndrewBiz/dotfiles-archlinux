@@ -11,3 +11,6 @@ PS1='[\u@\h \W]\$ '
 
 # for ssh-agent to worw with keys
 export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
+
+# rust
+. "$HOME/.cargo/env"
