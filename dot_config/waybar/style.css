@@ -132,7 +132,7 @@ button:hover {
 .modules-center {
   background-color: @base;
   color: @text;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 
 .modules-right {
